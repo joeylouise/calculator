@@ -10,6 +10,11 @@ button {
 	margin: 0 12px 10px -4px;
 }
 
+button:active {
+  transform: translate(0px, 3px);
+  /*box-shadow: none;*/
+}
+
 .hidden {
 	visibility: hidden;
 }
@@ -19,47 +24,36 @@ button {
 }
 
 .right {
-	margin-right: 0;
 	position: absolute;
-    right: 0;
 }
 
 .plus {
-   bottom: 0;
+   bottom: 15px;
    height: 164px;
-   margin-bottom: 0;
+   right: 10px;
 }
 
 .minus {
    height: 106px;
-   top: 70px;
+   top: 95px;
 
 }
 
 #screen {
 	background-color: yellow;
+	border-radius: 5px;
 	height: 60px;
 	margin-bottom: 10px;
+	text-align: right;
 	width: 100%;
 }
 
-#outer-wrap {
-	background-color: green;
-	height: 400px;
-	margin: 5% auto;
-	position: relative;
-	width: 320px;
-}
-
-#inner-wrap {
- 	/*background-color: blue;*/
- 	height: 350px;
- 	position: absolute;
- 	top: 25px;
- 	right: 22px;
- 	width: 276px;
-}
-
-#screen {
-	border-radius: 5px;
+#wrap {
+ 	background-color: blue;
+ 	box-sizing: border-box;
+ 	height: 400px;
+ 	margin: 5% auto;
+ 	padding: 25px 22px;
+ 	position: relative;
+ 	width: 320px;
 }
