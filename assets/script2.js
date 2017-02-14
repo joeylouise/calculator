@@ -14,8 +14,9 @@ for (var i = 0; i < keys.length; i++) {
 
 		//If = button is pressed
 		else if (btnValue === '=') {
+			//Set variable for last character in the display
 			var lastChar = displayValue[displayValue.length-1];
-			//If last character in the display is an operator or decimal, remove it before calculation
+			//If last character in the display is an operator or decimal, remove it
 			if (operators.indexOf(lastChar) !== -1 || lastChar === '.') {
 				displayValue = displayValue.slice(0,-1);
 			}
@@ -30,8 +31,12 @@ for (var i = 0; i < keys.length; i++) {
 		else if (operators.indexOf(btnValue) !== -1) {
 			//Set variable for last character in the display
 			var lastChar = displayValue[displayValue.length-1];
-			//If the last character in the display is not an operator, add btnValue to display
-			if (operators.indexOf(lastChar) === -1) {
+			//If display is not empty and the last character in the display is not an operator, add btnValue to display
+			if (displayValue !== '' && operators.indexOf(lastChar) === -1) {
+				display.innerHTML += btnValue;
+			}
+			//If display is empty and btnValue is -, add btnValue to display
+			else if (displayValue === '' && btnValue === '-') {
 				display.innerHTML += btnValue;
 			}
 		}
