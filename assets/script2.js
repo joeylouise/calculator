@@ -24,7 +24,10 @@ for (var i = 0; i < keys.length; i++) {
 			displayValue = displayValue.replace(/x/g, '*').replace(/÷/g, '/');
 			//Evaluate the string contained in the display
 			console.log(displayValue);
-			display.innerHTML = eval(displayValue);
+			//If display is not empty
+			if (displayValue !== '') {
+				display.innerHTML = eval(displayValue);
+			}
 		}
 
 		//If an operator is pressed
